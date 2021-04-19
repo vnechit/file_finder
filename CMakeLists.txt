@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(Qt5Core REQUIRED)
 
-set(SOURCE_FILES main.cpp scanner.cpp scanner.h arg_parser.cpp arg_parser.h arg_property.h errors.h)
+set(SOURCE_FILES ffinder.cpp scanner.cpp scanner.h arg_parser.cpp arg_parser.h arg_property.h errors.h)
 
 add_executable(opersys2 ${SOURCE_FILES})
 

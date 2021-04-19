@@ -6,7 +6,6 @@
 #include <stdexcept>
 #include <string>
 
-inline void error(const std::string& msg)
-{
-    throw std::runtime_error(msg);
+inline void error(const std::string& msg){
+    throw runtime_error(msg);
 }
