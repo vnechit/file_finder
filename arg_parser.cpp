@@ -41,7 +41,7 @@ arg_property arg_parser(int argc, char **argv) {
     retarg.Full_patch = par.isSet("full-path");
     retarg.Relative_path = par.isSet("relative-path");
     if (retarg.Full_patch == retarg.Relative_path && retarg.Full_patch){
-        error("установлеы два формата вывода, ожидался один");
+        error("Установлеы два формата вывода, ожидался один");
     }
     if(retarg.Full_patch == retarg.Relative_path && !retarg.Full_patch) {
         retarg.Full_patch = true;

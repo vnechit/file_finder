@@ -10,7 +10,6 @@ void DebugInfo(const arg_property& argpr) {
     if(!argpr.DEBUG) {
         return;
     }
-
     cout << "=====================INFO=====================" << endl;
     cout << "Начальная директория: " << argpr.Dir << endl;
     cout << "Строка поиска: " << argpr.EXPR << endl;

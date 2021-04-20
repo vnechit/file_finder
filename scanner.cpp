@@ -58,10 +58,10 @@ list<string> ScannerFileSystem::scanner() {
     list<string> listDirAndFile;
     if (!listDirInfo.empty()) {
         int count = listDirInfo.front().RecurOut(listDirAndFile);
-        listDirAndFile.push_front("РєРѕР»РёС‡РµСЃС‚РІРѕ С„Р°Р№Р»РѕРІ Рё РїР°РїРѕРє: " + to_string(count));
+        listDirAndFile.push_front("Количество файлов и папок: " + to_string(count));
     }
     else {
-        listDirAndFile.push_front("Р¤Р°Р№Р»РѕРІ РЅРµ РЅР°Р№РґРµРЅРѕ!");
+        listDirAndFile.push_front("Файлов не найдено!");
     }
     return listDirAndFile;
 }
@@ -101,7 +101,7 @@ int ScannerFileSystem::DirInfo::RecurOut(list<string> &listOut){
     for(int i = 0; i <= this->depth; i++) {
         cos += "-";
     }
-    listOut.push_back(cos + Name + " СЂР°Р·РјРµСЂ: " + to_string(this->size));
+    listOut.push_back(cos + Name + " Размер: " + to_string(this->size));
     int countElement = this->listDir.size() + this->listFile.size();
     for(auto &dir : this->listDir) {
         countElement += dir.RecurOut(listOut);
